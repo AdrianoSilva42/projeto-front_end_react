@@ -5,17 +5,19 @@ export const ContainerHeader = styled.section`
 
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: row;
     background-color: grey;
-    width: 80%;
-    height: 10vh;
+    width: 45%;
+    height: 80px;
     margin: auto;
     border-radius: 15px;
 
 `;
 
 export const Titulo2 = styled.h2`
-
-    padding: 6px;
+    font-size: 1.4em;
+    text-align: center;
+    
 `;
 

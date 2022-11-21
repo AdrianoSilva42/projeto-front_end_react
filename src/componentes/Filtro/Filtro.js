@@ -1,11 +1,22 @@
 import React from "react";
+import {ContainerFiltro, Titulo1, Input} from './style'
 
 export default function Filtro(){
     return(
-        <div>
-            <h1>Filtros de Busca</h1>
-            
+        <ContainerFiltro>
+            <Titulo1>Filtros</Titulo1>
 
-        </div>
+            <label htmlFor='valorMin'>Valor Minimo:</label>
+            <Input type='number' id='valorMin' name='valorMin' />
+        {/* ------------------------------------------------------------- */}
+            <label htmlFor='valorMax'>Valor Maximo:</label>
+            <Input type='number' id='valorMax' name='valorMax' />
+
+        {/* ------------------------------------------------------------- */}
+
+            <label htmlFor='searchName'>Buscar por nomes:</label>
+            <Input type='text' id='procurarNome' name='searchName' />
+
+        </ContainerFiltro>
     )
 }
