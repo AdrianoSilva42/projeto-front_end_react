@@ -1,10 +1,14 @@
 import React from "react";
-import {ContainerProduto} from './style'
+import {CardProduto, Image} from './style'
 
-export default function Produtos(){
+export default function Produtos(props){
     return(
-        <ContainerProduto>
-                <p>Produtos</p>
-        </ContainerProduto>
-    )
-}
+        <div>
+            <CardProduto>
+                <Image src={props.produto1.img}/>
+                <p>{props.produto1.name}</p>
+                <p>{props.produto1.valor}</p>
+            </CardProduto>
+        </div>
+    );
+};

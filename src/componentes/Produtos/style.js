@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
-export const ContainerProduto = styled.section`
+export const CardProduto = styled.div`
+    width:  40%;
+    height: 70%;
+    margin: 3%;
+    border: 1px solid black;
+`;
 
-    border: solid 2px black;
-    width: 50%;
-    height: 90%;
-    margin: auto;
-`
+export const Image = styled.img`
+    width: 100%;
+    height: 70%;
+`;
