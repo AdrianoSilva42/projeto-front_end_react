@@ -1,30 +1,48 @@
-import React from "react";
+import React, {useState} from "react";
+import ProdutoDate from "../../Date/Produtos.json";
 import {ContainerProduto, QuantProdu, Ordem, Label} from './style'
 import Produtos from "../Produtos/Produtos";
 
-export default function TelaProdutos(){
+export default function TelaProdutos(props){
 
-    const produtos = [
-        {
-           name:'Vostok (USSR, 1961)',
-           valor: 900.650,
-           img:'https://cdnb.artstation.com/p/assets/images/images/003/770/751/large/alexandr-ugrumov-f2.jpg?1477329721'
-         }
-       ]
+        //Lista de dados para utilizar
+        const [ProdutosList, setProdutosList] = useState(ProdutoDate)
+        
+        const [ordem, setOrdem] = useState('crescente')
 
     return(
         
         <ContainerProduto>
-                <QuantProdu>Quantidade de produtos:{}</QuantProdu>
+                <QuantProdu>Quantidade de produtos:{ProdutosList.length}</QuantProdu>
                 <Label htmlFor="ordem">Ordenação:</Label>
-                <Ordem id="ordem"> 
+                <Ordem id="ordem"
+                       value={ordem}
+                       onChange={(e) => {setOrdem(e.target.value)}}>
+
                     <option value="crescente">Crescente</option>
                     <option value="decrescente">Decrescente</option>
                 </Ordem>
-                {/* <Produtos produto1={produtos[0]} />
-                <Produtos produto1={produtos[0]} />
-                <Produtos produto1={produtos[0]} />
-                <Produtos produto1={produtos[0]} /> */}
+                {ProdutosList
+                    .filter((produto)=>{
+                        return produto.name.toLowerCase().includes(props.query.toLowerCase())
+                    })
+                    .filter((produto) => {
+                        return produto.valor >= props.priceMin || props.priceMin === ''
+                    })
+                    .filter((produto) => {
+                        return produto.valor <= props.priceMax || props.priceMax === ''
+                    })
+                    .sort((min, max) => {
+                        switch(ordem){
+                            case 'crescente':
+                                return min.valor - max.valor
+                            default:
+                                return min.valor + max.valor
+                        }
+                    })
+                    .map((produto) => {
+                        return <Produtos key={produto.id} produto={produto}/>
+                    })}
         </ContainerProduto>
     )
 }

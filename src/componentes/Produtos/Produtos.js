@@ -1,13 +1,14 @@
 import React from "react";
-import {CardProduto, Image} from './style'
+import {CardProduto, Image, Parag, Button} from './style'
 
 export default function Produtos(props){
     return(
         <div>
             <CardProduto>
-                <Image src={props.produto1.img}/>
-                <p>{props.produto1.name}</p>
-                <p>{props.produto1.valor}</p>
+                <Image src={props.produto.img}/>
+                <Parag>{props.produto.name}</Parag>
+                <Parag>R$: {props.produto.valor}</Parag>
+                <Button> Adicionar </Button>
             </CardProduto>
         </div>
     );

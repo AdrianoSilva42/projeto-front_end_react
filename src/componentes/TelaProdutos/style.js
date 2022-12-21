@@ -4,10 +4,10 @@ export const ContainerProduto = styled.section`
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr ;
-    border: solid 2px black;
-    width: 50%;
-    height: 90%;
+    //grid-template-rows: 2fr 1fr ;
+    //border: solid 2px black;
+    width: 55vw;
+    height: 100vh;
     margin: auto; 
     gap: 5px;
    
