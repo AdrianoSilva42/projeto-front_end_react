@@ -9,7 +9,7 @@ https://user-images.githubusercontent.com/92235269/212229946-c6504bac-4e25-48c2-
 
 ## 📲 Link do deploy
 
-Use a aplicação em: [https://adriano-barbosa-projeto-react-gms.surge.sh/]() 
+Use a aplicação em: [https://adriano-barbosa-projeto-react-gms.surge.sh]() 
 
 ## 📑 Sobre o projeto
 
