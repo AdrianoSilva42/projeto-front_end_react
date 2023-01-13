@@ -11,6 +11,8 @@ https://user-images.githubusercontent.com/92235269/212229946-c6504bac-4e25-48c2-
 
 Use a aplicação em: [adriano-barbosa-projeto-react-gms.surge.sh]() 
 
+- Caso so site não abra ao clicar no link, copiar e colat no navegador vai levar á pagina 
+
 ## 📑 Sobre o projeto
 
 E-commerce de vendas das naves, foguetes e satelites mais famosos da historia 
